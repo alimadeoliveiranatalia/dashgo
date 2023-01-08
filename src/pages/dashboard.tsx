@@ -10,7 +10,6 @@ const Chart = dynamic(() => import("react-apexcharts"), {
 
 const options: ApexOptions = {
     chart: {
-        width:'auto',
         toolbar: {
             show: false
         },
@@ -75,7 +74,7 @@ export default function Dashboard(){
                         pb="4"
                     >
                         <Text fontSize="lg" mb="4">Inscritos da Semana</Text>
-                        <Chart options={options} series={series} type="area" height={160} />
+                        <Chart options={options} series={series} type="area" height={160} width='100%'/>
                     </Box>
                     <Box
                         p={["6", "8"]}
@@ -84,7 +83,7 @@ export default function Dashboard(){
                         //pb="4"
                     >
                         <Text fontSize="lg" mb="4">Taxa de Abertura</Text>
-                        <Chart options={options} series={series} type="area" height={160} />
+                        <Chart options={options} series={series} type="area" height={160} width='100%'/>
                     </Box>
                 </SimpleGrid>
             </Flex>
