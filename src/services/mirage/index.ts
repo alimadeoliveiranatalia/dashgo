@@ -26,7 +26,7 @@ export function makeServer(){
             })
         },
         seeds(server){
-            server.createList('user', 10)
+            server.createList('user', 50)
         },
         routes(){
             this.namespace = 'api';
@@ -48,6 +48,7 @@ export function makeServer(){
                     { users }
                 )
             });
+            this.get("/users/:id");
             this.post("/users");
             this.namespace = '';
             this.passthrough();
